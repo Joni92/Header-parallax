@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Parallax effect on scrolling</title>
+</head>
+<body>
+    <section>
+        <img src="./img/bg.jpg" id="bg" alt="">
+        <h2 id="text">Ushuaia</h2>
+        <img src="./img/girl.png" id="girl" alt="">
+        <img src="./img/clouds_1.png" id="cloud_1" alt="">
+        <img src="./img/clouds_2.png" id="cloud_2" alt="">
+        <img src="./img/mountain_left.png" id="mountain_left" alt="">
+        <img src="./img/mountain_right.png" id="mountain_right" alt="">
+    </section>
+    <div class="sec">
+        <h2>ScrollTriger is Awesome</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quia repudiandae. Omnis aliquid voluptatibus eius perferendis libero labore quod at ad recusandae in odit dolores dignissimos necessitatibus saepe, ullam eaque obcaecati sed maxime, accusantium dicta ut? Reprehenderit in a quos natus nam magni est voluptatem odit suscipit voluptas, neque fugiat ratione deserunt perspiciatis modi nobis! Porro odit neque voluptas sint itaque minus sequi eveniet corporis pariatur fugiat cum adipisci, maxime rerum quasi, ducimus id fugit magni? Ipsum eum et quaerat mollitia blanditiis, magni velit neque labore ducimus enim quasi facere vel nostrum ab reprehenderit? Ducimus nobis nulla explicabo vero voluptate, laudantium cupiditate! Sequi recusandae sed sapiente. Veniam facilis perferendis recusandae dicta et repellendus dolor veritatis labore, expedita velit aliquid sit tempora nihil? Dolores consectetur ipsum id blanditiis excepturi sed. Reprehenderit voluptatum ad veritatis eligendi aut, ratione laudantium sint dicta, iste a corporis temporibus sit ut. Accusamus nisi eius ratione vitae, suscipit aperiam voluptas blanditiis voluptate fugiat. Velit molestiae facilis dignissimos natus officiis perferendis, rem omnis illum. Error, modi libero. Similique debitis praesentium consectetur sequi perferendis? Consequatur tenetur id obcaecati blanditiis voluptatibus officiis suscipit amet rerum rem qui vero facere eaque veritatis, saepe similique tempore quasi fuga. Enim facilis voluptate optio tempora! Aut voluptate incidunt harum laboriosam magni sed minima, quidem id perspiciatis provident a non reprehenderit consequuntur odit repellendus velit nostrum illo molestiae tenetur dolorem explicabo nesciunt accusantium vitae ut! Dolorum sed dolores molestias quos nulla quasi unde modi reprehenderit, delectus qui explicabo tempore sit commodi id omnis incidunt libero? Error incidunt aliquid rerum et esse inventore, vitae sed qui possimus dicta, at ut, assumenda officiis? Vitae sit perspiciatis consequuntur repudiandae, id, culpa repellat dolorem illum et ipsum. <br><br> Assumenda quas cupiditate adipisci fugiat qui hic dolores enim? Voluptas fugiat doloribus delectus laboriosam sequi rerum recusandae deserunt architecto laudantium! Vero incidunt, totam ea voluptatum vel corporis aut ut omnis cumque, esse culpa consequuntur. Cumque impedit, dicta molestias magnam voluptatibus repellendus dolor nulla aspernatur excepturi sequi repudiandae nobis error officia laborum temporibus eum veritatis iusto. Debitis quidem molestias nam ipsum minus maxime beatae illum, sint molestiae aliquam hic libero quo maiores rerum suscipit exercitationem porro, vel enim accusamus laudantium ducimus iusto perferendis incidunt. Ipsam in modi, soluta expedita fuga beatae vel optio molestias. Ad labore ratione quis architecto error quibusdam eligendi inventore sunt alias ipsam. Perferendis voluptas eveniet, illo eligendi deleniti optio dicta, iusto laudantium distinctio accusantium, qui molestias necessitatibus.</p>
+    </div>
+
+
+    <!-- SCRIPT GSAP --> <!-- https://greensock.com/scrolltrigger/ -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
+    <script>
+
+        /* Control Back Mountains movement */
+        gsap.to("#bg", {
+            scrollTrigger : {
+                scrub : 1                
+            },
+            scale : 1.5
+        })
+
+        /* Control Girl Movement */
+        gsap.to("#girl", {
+            scrollTrigger : {
+                scrub : 1                
+            },
+            scale : 0.5
+        })
+        /* ------------------------------------------------- */ 
+
+
+        /* Control movement - left mountain */
+
+        gsap.to("#mountain_left", {
+            scrollTrigger : {
+                scrub : 1                
+            },
+            x: -500,
+        })
+
+        /* Control movement - rifht mountain */
+
+        gsap.to("#mountain_right", {
+            scrollTrigger : {
+                scrub : 1                
+            },
+            x: 500,
+        })
+        /* ------------------------------------------------- */
+
+        /* Clouds movement */
+
+        gsap.to("#cloud_1", {
+            scrollTrigger : {
+                scrub : 1                
+            },
+            x: 200,
+        })
+
+        gsap.to("#cloud_2", {
+            scrollTrigger : {
+                scrub : 1                
+            },
+            x: -200,
+        })
+        /* ------------------------------------------------- */
+        
+        /* Title movement */
+
+        gsap.to("#text", {
+            scrollTrigger : {
+                scrub : 1                
+            },
+            y: 300,
+        })
+    </script>
+
+</body>
+</html> 
